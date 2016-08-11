@@ -132,8 +132,7 @@ class PersonTest extends \PHPUnit_Framework_TestCase
      */
     public function test_invalidGender_throwsException($value)
     {
-        $this->setExpectedException(\InvalidArgumentException::class);
-
+        $this->setExpectedException('InvalidArgumentException');
         $this->faker->cnp($value);
     }
 
@@ -158,8 +157,7 @@ class PersonTest extends \PHPUnit_Framework_TestCase
      */
     public function test_invalidYear_throwsException($value)
     {
-        $this->setExpectedException(\InvalidArgumentException::class);
-
+        $this->setExpectedException('InvalidArgumentException');
         $this->faker->cnp(null, $value);
     }
 
@@ -182,7 +180,7 @@ class PersonTest extends \PHPUnit_Framework_TestCase
      */
     public function test_invalidCountyCode_throwsException($value)
     {
-        $this->setExpectedException(\InvalidArgumentException::class);
+        $this->setExpectedException('InvalidArgumentException');
         $this->faker->cnp(null, null, $value);
     }
 
@@ -204,7 +202,7 @@ class PersonTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * 
+     *
      * @param $gender
      * @param $dateOfBirth
      * @param $county
